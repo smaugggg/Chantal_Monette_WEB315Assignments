@@ -43,3 +43,20 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design--version 5.0
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer--version 5.0.0<br>
 
 Now the pages for my model were created! Success!
+
+reran <br>
+dotnet-aspnet-codegenerator razorpage -m Member -dc DreamcatcherMembersContext -udl -outDir Pages/Members --referenceScriptLibraries -sqlite
+
+scaffolding complete.
+
+
+
+20220212 1622
+
+time to do the EF migration. Entered commands: <br>
+dotnet ef migrations add InitialCreate<br>
+dotnet ef database update
+
+those were all the things I had to put into the terminal. Thank you 
+
+Chantal Monette
