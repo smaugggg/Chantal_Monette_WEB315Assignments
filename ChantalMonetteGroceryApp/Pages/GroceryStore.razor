@@ -2,4 +2,54 @@
 
 <h1>This is the Grocery Store Page.</h1>
 
-AHHHHHHHHHHHH
+<div class="container">
+    <h3 class="p-3 text-center">List of Grocery Aisles</h3>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Aisle Number</th>
+                <th>Aisle Name</th>
+                <th>Food Items</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var GroceryIsle in aisles)
+            {
+                <tr>
+                    <td>@GroceryIsle.aisleNumber</td>
+                    <td>@GroceryIsle.aisleName</td>
+                    <td>@GroceryIsle.listofFoodItem</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IEnumerable<GroceryIsle> aisles = new[] {
+        new GroceryIsle { aisleNumber = 1, aisleName = "Cereal", listofFoodItem = Cereal },
+        new GroceryIsle { aisleNumber = 2, aisleName = "Cookies", listofFoodItem =  },
+        new GroceryIsle { aisleNumber = 3, aisleName = "Dairy", listofFoodItem =  }
+    };
+
+    List<FoodItem> Cereal = new List<FoodItem>
+    {
+        new FoodItem { ID = 1, quantity = 10, foodName = "Coco Puffs", department = "Cereal", typeOfFood = "sugary", origin = "USA" },
+        new FoodItem { ID = 2, quantity = 16, foodName = "Cheerios", department = "Cereal", typeOfFood = "healthy", origin = "USA" },
+        new FoodItem { ID = 8, quantity = 13, foodName = "Froot Loops",  department = "Cereal", typeOfFood = "fruity", origin = "USA" }
+    };
+
+    List<FoodItem> Cookies = new List<FoodItem>
+    {
+        new FoodItem { ID = 3, quantity = 6, foodName = "Chips a-Hoy",  department = "Cookes", typeOfFood = "sugary", origin = "USA" },
+        new FoodItem { ID = 4, quantity = 18, foodName = "Teddy Grahams",  department = "Cookies", typeOfFood = "sugary", origin = "Canada" },
+        new FoodItem { ID = 5, quantity = 3, foodName = "Chocolate Chip",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
+    };
+    
+    List<FoodItem> Dairy = new List<FoodItem>
+    {
+        new FoodItem { ID = 6, quantity = 17, foodName = "Whole Milk",  department = "Dairy", typeOfFood = "fatty", origin = "Canada" },
+        new FoodItem { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" }
+    };
+
+}
