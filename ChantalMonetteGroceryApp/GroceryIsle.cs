@@ -8,18 +8,17 @@ using System.Collections.Generic;
     
 public class GroceryIsle 
 {
-    public List<FoodItem> listofFoodItem { get; set; }
+    public List<FoodItem> listofFoodItem;
     public int aisleNumber { get; set; }
     public string aisleName { get; set; }
 
-    public GroceryIsle()
+    public GroceryIsle(int aisleNumb, string aisleNam, List<FoodItem> listofFoodItem)
     {
-        listofFoodItem = new List<FoodItem>();        
+        listofFoodItem = new List<FoodItem>();
+        aisleNumb = aisleNumber;
+        aisleNam = aisleName;        
     }
 
-    public void NewFood(FoodItem newFoodItem)
-    {
-        listofFoodItem.Add(newFoodItem);
-    }
+}   
 
-}
+
