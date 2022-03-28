@@ -2,62 +2,140 @@
 
 <h1>This is the Grocery Store Page.</h1>
 
+@* 17. Add a header tag that says Add Food Item to an Aisle. *@
 <h2>Add Food Item to an Aisle:</h2>
+<br />
 
+@* 18. Input boxes for each property of a food item, as well as an input box
+    for and aisle number *@
+<EditForm Model="@FoodItem">
+    <div class="form-group row">
+        <label for="quantity" class="col-sm-2 col-form-label">Quantity</label>
+        <div class="col-sm-10">
+            <InputText id="quantity" class="form-control" @bind-Value="FoodItem.quantity" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="foodName" class="col-sm-2 col-form-label">Food Name: </label>
+        <div class="col-sm-10">
+            <InputText id="foodName" class="form-control" @bind-Value="FoodItem.foodName" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="department" class="col-sm-2 col-form-label">Department</label>
+        <div class="col-sm-10">
+            <InputText id="department" class="form-control" @bind-Value="FoodItem.department" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="typeOfFood" class="col-sm-2 col-form-label">Type of Food: </label>
+        <div class="col-sm-10">
+            <InputText id="typeOfFood" class="form-control" @bind-Value="FoodItem.typeOfFood" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="origin" class="col-sm-2 col-form-label">Origin</label>
+        <div class="col-sm-10">
+            <InputText id="origin" class="form-control"  @bind-Value="FoodItem.origin" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="aisle" class="col-sm-2 col-form-label">Aisle Number</label>
+        <div class="col-sm-10">
+            <InputText id="aisle" class="form-control"  @bind-Value="GroceryIsle.aisleNumber" />
+        </div>
+    </div>
+</EditForm>
 
-<div class="container">
-    <h3>List of Grocery Aisles</h3>
-    <table>
-        <thead>
+<br /><br /><br />
+
+<h3>List of Grocery Aisles</h3>
+
+<table>
+    @foreach (var GroceryIsle in aisles)
+    {
+       <thead>
             <tr>
                 <th>Aisle Number</th>
                 <th>Aisle Name</th>
-                <th>Food Items</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var GroceryIsle in aisles)
-            {
-                <tr>
-                    <td>@GroceryIsle.aisleNumber</td>
-                    <td>@GroceryIsle.aisleName</td>
-                    <td>@GroceryIsle.listofFoodItem</td>
-                </tr>
-            }
-            @foreach (var FoodItem in ?????????)
-            {
-                <thead>
-                    <tr>
-                        <th>↑ / ↓</th>
-                        <th>Qty</th>
-                        <th>Name</th>
-                        <th>Type of Food</th>
-                        <th>Origin</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>@FoodItem.quantity</td>
-                        <td>@FoodItem.foodName</td>
-                        <td>@FoodItem.typeOfFood</td>
-                        <td>@FoodItem.origin</td>
-                    </tr>
-                </tbody>
-            }
+            <tr>
+                <td>@GroceryIsle.aisleNumber</td>
+                <td>@GroceryIsle.aisleName</td>
+            </tr>
         </tbody>
-    </table>
-</div>
+    }
+    @foreach (var FoodItem in ????????
+    {
+        <thead>
+            <tr>
+                <th>↑ / ↓</th>
+                <th>Qty</th>
+                <th>Name</th>
+                <th>Type of Food</th>
+                <th>Origin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> // 15. For each food item output, have a quantity counter
+                    <button class="btn btn-primary" @onclick="FoodItem.qtyIncrease">↑</button>
+                    <button class="btn btn-primary" @onclick="FoodItem.qtyDecrease">↓</button>
+                </td>
+                <td>@FoodItem.quantity</td>
+                <td>@FoodItem.foodName</td>
+                <td>@FoodItem.typeOfFood</td>
+                <td>@FoodItem.origin</td>
+            </tr>
+        </tbody>
+    }
+
+</table>
+
 
 @code {
-    private IEnumerable<GroceryIsle> aisles = new[] 
+    // 12. In your Grocery Store component add a List of GroceryIsles
+    // 13. Add 3 Aisles to your GroceryStore.
+    List<GroceryIsle> aisles = new List<GroceryIsle> 
     {
         new GroceryIsle { aisleNumber = 1, aisleName = "Cereal", listofFoodItem = Cereal },
         new GroceryIsle { aisleNumber = 2, aisleName = "Cookies", listofFoodItem = Cookies },
         new GroceryIsle { aisleNumber = 3, aisleName = "Dairy", listofFoodItem = Dairy }
     };
+
+        FoodItem CocoPuffs = new FoodItem
+        { ID = 1, quantity = 10, foodName = "Coco Puffs", department = "Cereal", typeOfFood = "sugary", origin = "USA" };
+
+        FoodItem Cheerios = new FoodItem
+        { ID = 2, quantity = 16, foodName = "Cheerios", department = "Cereal", typeOfFood = "healthy", origin = "USA" };
+
+        FoodItem FrootLoops = new FoodItem
+        { ID = 8, quantity = 13, foodName = "Froot Loops",  department = "Cereal", typeOfFood = "fruity", origin = "USA" };
+
+        FoodItem ChipsAHoy = new FoodItem
+        { ID = 3, quantity = 6, foodName = "Chips a-Hoy",  department = "Cookies", typeOfFood = "sugary", origin = "USA" };
+
+        FoodItem TeddyGrahams = new FoodItem
+        { ID = 4, quantity = 18, foodName = "Teddy Grahams",  department = "Cookies", typeOfFood = "sugary", origin = "Canada" };
+
+        FoodItem Oreos = new FoodItem
+        { ID = 5, quantity = 3, foodName = "Oreos",  department = "Cookies", typeOfFood = "sugary", origin = "USA" };
+
+        FoodItem Milk = new FoodItem
+        { ID = 6, quantity = 17, foodName = "Whole Milk",  department = "Dairy", typeOfFood = "fatty", origin = "Canada" };
+
+        FoodItem Yogurt = new FoodItem
+        { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" };
+    
+    // 13. Each Aisle should have at least 2 FoodItems
+    List<FoodItem> Cereal = new List<FoodItem> { CocoPuffs, Cheerios, FrootLoops };
+    List<FoodItem> Cookies = new List<FoodItem> { ChipsAHoy, TeddyGrahams, Oreos };
+    List<FoodItem> Dairy = new List<FoodItem> { Milk, Yogurt };
+
+
+
 
 
 }
