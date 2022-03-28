@@ -9,29 +9,31 @@
 @* 18. Input boxes for each property of a food item, as well as an input box
     for and aisle number *@
 <EditForm Model="@NewFoodItem">
+    @*              having an issue here with converting int to string and back for the purpose of the form
     <div class="form-group row">
         <label for="quantity" class="col-sm-2 col-form-label">Quantity: </label>
-        <InputText id="quantity" class="form-control" @bind-Value="FoodItem.quantity" />
-    </div>
+        <InputText id="quantity" class="form-control" @bind-Value="NewFoodItem.quantity" />
+    </div>*@
     <div class="form-group row">
         <label for="foodName" class="col-sm-2 col-form-label">Food Name: </label>
-        <InputText id="foodName" class="form-control" @bind-Value="FoodItem.foodName" />
-    </div>
-    <div class="form-group row">
-        <label for="department" class="col-sm-2 col-form-label">Department</label>
-        <InputText id="department" class="form-control" @bind-Value="FoodItem.department" />
+        <InputText id="foodName" class="form-control" @bind-Value="NewFoodItem.foodName" />
     </div>
     <div class="form-group row">
         <label for="typeOfFood" class="col-sm-2 col-form-label">Type of Food: </label>
-        <InputText id="typeOfFood" class="form-control" @bind-Value="FoodItem.typeOfFood" />
+        <InputText id="typeOfFood" class="form-control" @bind-Value="NewFoodItem.typeOfFood" />
     </div>
     <div class="form-group row">
         <label for="origin" class="col-sm-2 col-form-label">Origin</label>
-        <InputText id="origin" class="form-control"  @bind-Value="FoodItem.origin" />
+        <InputText id="origin" class="form-control"  @bind-Value="NewFoodItem.origin" />
     </div>
     <div class="form-group row">
         <label for="aisle" class="col-sm-2 col-form-label">Aisle Number</label>
-        <InputText id="aisle" class="form-control"  @bind-Value="GroceryIsle.aisleNumber" />
+        <InputSelect id="aisle" class="form-control" @bind-Value="NewFoodItem.department">
+            <option value="Select">--Select--</option>
+            <option value="Cereal">1. Cereal</option>
+            <option value="Cookies">2. Cookies</option>
+            <option value="Dairy">3. Dairy</option>
+        </InputSelect>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary" />
 </EditForm>
@@ -98,23 +100,24 @@
     // 13. Add 3 Aisles to your GroceryStore.
     List<GroceryIsle> aisles = new List<GroceryIsle> 
     {
+            // I can't figure out why the listofFoodItem won't accept the lists I created here...
         new GroceryIsle { aisleNumber = 1, aisleName = "Cereal", listofFoodItem = Cereal },
         new GroceryIsle { aisleNumber = 2, aisleName = "Cookies", listofFoodItem = Cookies },
         new GroceryIsle { aisleNumber = 3, aisleName = "Dairy", listofFoodItem = Dairy }
     };
 
     // 13. Each Aisle should have at least 2 FoodItems
-    List<FoodItem> Cereal = new List<FoodItem> {
+    List<FoodItem> Cereal = new List<FoodItem>() {
         new FoodItem { ID = 1, quantity = 10, foodName = "Coco Puffs", department = "Cereal", typeOfFood = "sugary", origin = "USA" },
         new FoodItem { ID = 2, quantity = 16, foodName = "Cheerios", department = "Cereal", typeOfFood = "healthy", origin = "USA" },
         new FoodItem { ID = 8, quantity = 13, foodName = "Froot Loops",  department = "Cereal", typeOfFood = "fruity", origin = "USA" }
     };
-    List<FoodItem> Cookies = new List<FoodItem> { 
+    List<FoodItem> Cookies = new List<FoodItem>() { 
         new FoodItem { ID = 3, quantity = 6, foodName = "Chips a-Hoy",  department = "Cookies", typeOfFood = "sugary", origin = "USA" },
         new FoodItem { ID = 4, quantity = 18, foodName = "Teddy Grahams",  department = "Cookies", typeOfFood = "sugary", origin = "Canada" },
         new FoodItem { ID = 5, quantity = 3, foodName = "Oreos",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
     };
-    List<FoodItem> Dairy = new List<FoodItem> { 
+    List<FoodItem> Dairy = new List<FoodItem>() { 
         new FoodItem { ID = 6, quantity = 17, foodName = "Whole Milk",  department = "Dairy", typeOfFood = "fatty", origin = "Canada" },
         new FoodItem { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" }
     };

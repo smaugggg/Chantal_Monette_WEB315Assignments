@@ -90,6 +90,51 @@ using ChantalMonetteGroceryApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 39 "C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Assignment2\Chantal_Monette_WEB315Assignments\ChantalMonetteGroceryApp\Pages\GroceryStore.razor"
+       
+    // creates an instance of a fooditem for our form to bind to
+    FoodItem NewFoodItem = new FoodItem();
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 96 "C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Assignment2\Chantal_Monette_WEB315Assignments\ChantalMonetteGroceryApp\Pages\GroceryStore.razor"
+       
+    // 12. In your Grocery Store component add a List of GroceryIsles
+    // 13. Add 3 Aisles to your GroceryStore.
+    List<GroceryIsle> aisles = new List<GroceryIsle> 
+    {
+        new GroceryIsle { aisleNumber = 1, aisleName = "Cereal", listofFoodItem = Cereal },
+        new GroceryIsle { aisleNumber = 2, aisleName = "Cookies", listofFoodItem = Cookies },
+        new GroceryIsle { aisleNumber = 3, aisleName = "Dairy", listofFoodItem = Dairy }
+    };
+
+    // 13. Each Aisle should have at least 2 FoodItems
+    List<FoodItem> Cereal = new List<FoodItem>() {
+        new FoodItem { ID = 1, quantity = 10, foodName = "Coco Puffs", department = "Cereal", typeOfFood = "sugary", origin = "USA" },
+        new FoodItem { ID = 2, quantity = 16, foodName = "Cheerios", department = "Cereal", typeOfFood = "healthy", origin = "USA" },
+        new FoodItem { ID = 8, quantity = 13, foodName = "Froot Loops",  department = "Cereal", typeOfFood = "fruity", origin = "USA" }
+    };
+    List<FoodItem> Cookies = new List<FoodItem>() { 
+        new FoodItem { ID = 3, quantity = 6, foodName = "Chips a-Hoy",  department = "Cookies", typeOfFood = "sugary", origin = "USA" },
+        new FoodItem { ID = 4, quantity = 18, foodName = "Teddy Grahams",  department = "Cookies", typeOfFood = "sugary", origin = "Canada" },
+        new FoodItem { ID = 5, quantity = 3, foodName = "Oreos",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
+    };
+    List<FoodItem> Dairy = new List<FoodItem>() { 
+        new FoodItem { ID = 6, quantity = 17, foodName = "Whole Milk",  department = "Dairy", typeOfFood = "fatty", origin = "Canada" },
+        new FoodItem { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" }
+    };
+
+
+
+
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

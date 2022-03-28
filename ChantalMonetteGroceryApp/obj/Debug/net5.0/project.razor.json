@@ -45,35 +45,35 @@
         }
       },
       {
-        "HashCode": 224188647,
+        "HashCode": 680019650,
         "Kind": "Components.Component",
-        "Name": "ChantalMonetteGroceryApp.Pages.GroceryStore",
+        "Name": "ChantalMonetteGroceryApp.Pages.Counter",
         "AssemblyName": "ChantalMonetteGroceryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "GroceryStore"
+            "TagName": "Counter"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.GroceryStore"
+          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.Counter"
         }
       },
       {
-        "HashCode": 1590813610,
+        "HashCode": 537708908,
         "Kind": "Components.Component",
-        "Name": "ChantalMonetteGroceryApp.Pages.GroceryStore",
+        "Name": "ChantalMonetteGroceryApp.Pages.Counter",
         "AssemblyName": "ChantalMonetteGroceryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChantalMonetteGroceryApp.Pages.GroceryStore"
+            "TagName": "ChantalMonetteGroceryApp.Pages.Counter"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.GroceryStore",
+          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.Counter",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,35 +111,35 @@
         }
       },
       {
-        "HashCode": 680019650,
+        "HashCode": 224188647,
         "Kind": "Components.Component",
-        "Name": "ChantalMonetteGroceryApp.Pages.Counter",
+        "Name": "ChantalMonetteGroceryApp.Pages.GroceryStore",
         "AssemblyName": "ChantalMonetteGroceryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "GroceryStore"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.Counter"
+          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.GroceryStore"
         }
       },
       {
-        "HashCode": 537708908,
+        "HashCode": 1590813610,
         "Kind": "Components.Component",
-        "Name": "ChantalMonetteGroceryApp.Pages.Counter",
+        "Name": "ChantalMonetteGroceryApp.Pages.GroceryStore",
         "AssemblyName": "ChantalMonetteGroceryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChantalMonetteGroceryApp.Pages.Counter"
+            "TagName": "ChantalMonetteGroceryApp.Pages.GroceryStore"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.Counter",
+          "Common.TypeName": "ChantalMonetteGroceryApp.Pages.GroceryStore",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
