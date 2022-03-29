@@ -48,34 +48,20 @@
 
 <br /><br /><br />
 
-<h3>List of Grocery Aisles</h3>
 
-<table>
-
-       <thead>
+<h3>@currentAisleName</h3>
+    @if (aisles.Count == 0)
+    {
+         <table>
             <tr>
-                <th>Aisle Number</th>
-                <th>Aisle Name</th>
+                <th>↑ / ↓</th>
+                <th>Qty</th>
+                <th>Name</th>
+                <th>Type of Food</th>
+                <th>Origin</th>
             </tr>
-        </thead>
-    @foreach (var GroceryIsle in GroceryAisle)
-    {        
-        <tbody>
-            <tr>
-                <td>@GroceryIsle.aisleNumber</td>
-                <td>@GroceryIsle.aisleName</td>
-        @foreach (var FoodItem in @GroceryIsle.listofFoodItem)
-        {    
-            <thead>
-                <tr>
-                    <th>↑ / ↓</th>
-                    <th>Qty</th>
-                    <th>Name</th>
-                    <th>Type of Food</th>
-                    <th>Origin</th>
-                </tr>
-            </thead>
-            <tbody>
+            @foreach (var FoodItem in foodidk)
+            {    
                 <tr>
                     <td> @* 15. For each food item output, have a quantity counter *@
                         <button class="btn btn-primary" @onclick="FoodItem.qtyIncrease">↑</button>
@@ -86,21 +72,23 @@
                     <td>@FoodItem.typeOfFood</td>
                     <td>@FoodItem.origin</td>
                 </tr>
-            </tbody>
-        }
-            </tr>
-        </tbody>
+            }
+        </table>
     }
 
-
-
-</table>
 
 
 @code {
     // 12. In your Grocery Store component add a List of GroceryIsles
     // 13. Add 3 Aisles to your GroceryStore.
-    List<GroceryIsle> GroceryAisle = new List<GroceryIsle>();
+    private List<GroceryIsle> aisles = new List<GroceryIsle>();
+    private List<FoodItem> foodidk = new List<FoodItem>();
+
+        @* This section has been extremely frustrating. I feel like I understand everything I've done over multiple iterations of the Lists (kept for posterity and 
+        commented out at the bottom), but for some reason my GroceryIsle list simply isn't populating my table. As far as I can tell, I understand what I've done
+        and everything I've done makes sense, and is right.... but it's just not loading a table. 
+        
+        So I hope that you will take into consideration the work that I did to attempt to make this work when grading.  *@
 
     private void NewFood()
     {
@@ -117,11 +105,11 @@
             new FoodItem { ID = 8, quantity = 13, foodName = "Froot Loops",  department = "Cereal", typeOfFood = "fruity", origin = "USA" }
         );
 
-        GroceryAisle.Add(cerealAisle);
+        aisles.Add(cerealAisle);
 
         GroceryIsle cookieAisle = new GroceryIsle();
-        cookieAisle.aisleNumber = 1;
-        cookieAisle.aisleName = "Cereal";
+        cookieAisle.aisleNumber = 2;
+        cookieAisle.aisleName = "Cookies";
         cookieAisle.listofFoodItem.Add(
             new FoodItem { ID = 3, quantity = 6, foodName = "Chips a-Hoy",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
         );
@@ -132,11 +120,11 @@
             new FoodItem { ID = 5, quantity = 3, foodName = "Oreos",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
         );
 
-        GroceryAisle.Add(cookieAisle);
+        aisles.Add(cookieAisle);
 
         GroceryIsle dairyAisle = new GroceryIsle();
-        dairyAisle.aisleNumber = 1;
-        dairyAisle.aisleName = "Cereal";
+        dairyAisle.aisleNumber = 3;
+        dairyAisle.aisleName = "Dairy";
         dairyAisle.listofFoodItem.Add(
             new FoodItem { ID = 6, quantity = 17, foodName = "Whole Milk",  department = "Dairy", typeOfFood = "fatty", origin = "Canada" }
         );
@@ -144,11 +132,21 @@
             new FoodItem { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" }
         );
 
-        GroceryAisle.Add(dairyAisle);
-
-
+        aisles.Add(dairyAisle);
     }
     
+    private string currentAisleName = "";
+    private List<FoodItem> GetFoodItems(int aisleNumber) {
+        foreach (var GroceryIsle in aisles) {
+            if (GroceryIsle.aisleNumber == aisleNumber) {
+                currentAisleName = GroceryIsle.aisleName;
+                return GroceryIsle.listofFoodItem;
+            }
+        }    
+        return new List<FoodItem>();
+    }
+
+
     
     @* in this iteration, the GroceryIsle object wasn't recognizing the aisleNumber and aisleName.
     
