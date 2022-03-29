@@ -12,11 +12,9 @@ public class GroceryIsle
     public int aisleNumber { get; set; }
     public string aisleName { get; set; }
 
-    public GroceryIsle(int aisleNumb, string aisleNam, List<FoodItem> listofFoodItem)
+    public GroceryIsle()
     {
-        listofFoodItem = new List<FoodItem>();
-        aisleNumb = aisleNumber;
-        aisleNam = aisleName;        
+        listofFoodItem = new List<FoodItem>();    
     }
 
 }   

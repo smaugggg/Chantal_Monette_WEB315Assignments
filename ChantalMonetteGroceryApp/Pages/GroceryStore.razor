@@ -58,8 +58,7 @@
                 <th>Aisle Name</th>
             </tr>
         </thead>
-
-    @foreach (var GroceryIsle in aisles)
+    @foreach (var GroceryIsle in GroceryAisle)
     {        
         <tbody>
             <tr>
@@ -101,6 +100,58 @@
 @code {
     // 12. In your Grocery Store component add a List of GroceryIsles
     // 13. Add 3 Aisles to your GroceryStore.
+    List<GroceryIsle> GroceryAisle = new List<GroceryIsle>();
+
+    private void NewFood()
+    {
+        GroceryIsle cerealAisle = new GroceryIsle();
+        cerealAisle.aisleNumber = 1;
+        cerealAisle.aisleName = "Cereal";
+        cerealAisle.listofFoodItem.Add(
+            new FoodItem { ID = 1, quantity = 10, foodName = "Coco Puffs", department = "Cereal", typeOfFood = "sugary", origin = "USA" }
+        );
+        cerealAisle.listofFoodItem.Add(
+            new FoodItem { ID = 2, quantity = 16, foodName = "Cheerios", department = "Cereal", typeOfFood = "healthy", origin = "USA" }
+        );
+        cerealAisle.listofFoodItem.Add(
+            new FoodItem { ID = 8, quantity = 13, foodName = "Froot Loops",  department = "Cereal", typeOfFood = "fruity", origin = "USA" }
+        );
+
+        GroceryAisle.Add(cerealAisle);
+
+        GroceryIsle cookieAisle = new GroceryIsle();
+        cookieAisle.aisleNumber = 1;
+        cookieAisle.aisleName = "Cereal";
+        cookieAisle.listofFoodItem.Add(
+            new FoodItem { ID = 3, quantity = 6, foodName = "Chips a-Hoy",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
+        );
+        cookieAisle.listofFoodItem.Add(
+            new FoodItem { ID = 4, quantity = 18, foodName = "Teddy Grahams",  department = "Cookies", typeOfFood = "sugary", origin = "Canada" }
+        );
+        cookieAisle.listofFoodItem.Add(
+            new FoodItem { ID = 5, quantity = 3, foodName = "Oreos",  department = "Cookies", typeOfFood = "sugary", origin = "USA" }
+        );
+
+        GroceryAisle.Add(cookieAisle);
+
+        GroceryIsle dairyAisle = new GroceryIsle();
+        dairyAisle.aisleNumber = 1;
+        dairyAisle.aisleName = "Cereal";
+        dairyAisle.listofFoodItem.Add(
+            new FoodItem { ID = 6, quantity = 17, foodName = "Whole Milk",  department = "Dairy", typeOfFood = "fatty", origin = "Canada" }
+        );
+        dairyAisle.listofFoodItem.Add(
+            new FoodItem { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" }
+        );
+
+        GroceryAisle.Add(dairyAisle);
+
+
+    }
+    
+    
+    @* in this iteration, the GroceryIsle object wasn't recognizing the aisleNumber and aisleName.
+    
     public List<GroceryIsle> aisles = new () 
     {
         new GroceryIsle ( aisleNumber = 1, aisleName = "Cereal", 
@@ -126,7 +177,7 @@
                 new FoodItem { ID = 7, quantity = 15, foodName = "Banana Yogurt",  department = "Dairy", typeOfFood = "fruity", origin = "Greece" }
             } 
         )
-    };
+    }; *@
 
 
     @* In this iteration of the GroceryIsle list, the listofFoodItem doesn't register the name of the 
