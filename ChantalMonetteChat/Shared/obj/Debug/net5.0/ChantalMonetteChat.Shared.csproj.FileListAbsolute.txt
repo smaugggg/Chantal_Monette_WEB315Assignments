@@ -1,0 +1,12 @@
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\bin\Debug\net5.0\ChantalMonetteChat.Shared.deps.json
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\bin\Debug\net5.0\ChantalMonetteChat.Shared.dll
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\bin\Debug\net5.0\ref\ChantalMonetteChat.Shared.dll
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\bin\Debug\net5.0\ChantalMonetteChat.Shared.pdb
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.csproj.AssemblyReference.cache
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.AssemblyInfoInputs.cache
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.AssemblyInfo.cs
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.dll
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ref\ChantalMonetteChat.Shared.dll
+C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\obj\Debug\net5.0\ChantalMonetteChat.Shared.pdb

@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows,browser
+build_property.RootNamespace = ChantalMonetteChat.Shared
+build_property.ProjectDir = C:\Users\Chantal\OneDrive\Desktop\ST CLAIR\WEB315 ASP\Chantal_Monette_WEB315Assignments\Chantal_Monette_WEB315Assignments\ChantalMonetteChat\Shared\
