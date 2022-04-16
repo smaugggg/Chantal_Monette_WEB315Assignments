@@ -29,7 +29,7 @@ input:focus, select:focus {
     border: 1px solid #C5D6CE;
 }
 
-#submit {
+button {
     display: block;
     line-height: 24pt;
     padding: 0 20px;
@@ -38,6 +38,23 @@ input:focus, select:focus {
     transition: .2s all ease-in-out;
 }
 
-#submit:hover {
+button:hover {
     background: #f3f3f3;
+}
+
+.messages {
+    display: block;
+    background-color: #f3f3f3;
+    border: 1px solid #292215;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+	margin: 15px;
+	display: inline-block;
+	background: #292215;
+	color: #c0c3c4;
 }
