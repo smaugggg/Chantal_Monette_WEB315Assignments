@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+#messagebox {
+    background: #c0c3c4;
+    width: 40%;
+    padding: 50px 100px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 15px solid #292215;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    font-size: 12pt;
+    line-height: 24px;
+    color: #292215;
+}
+
+input {
+    margin-bottom: 10px;
+    border: none;
+    border: 1px solid #8f8f8f;
+    background: #f3f3f3;
+}
+
+input:focus, select:focus {
+    border: 1px solid #C5D6CE;
+}
+
+#submit {
+    display: block;
+    line-height: 24pt;
+    padding: 0 20px;
+    border: none;
+    background: #8f8f8f;
+    transition: .2s all ease-in-out;
+}
+
+#submit:hover {
+    background: #f3f3f3;
+}
